@@ -214,6 +214,7 @@ body {
   top: 6rem;
   right: 6rem;
   border-radius: 50%;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   z-index: 10; }
 
 .navigation__background {
@@ -225,15 +226,17 @@ body {
   right: 6.5rem;
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 5;
-  transform: scale(80); }
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.7, 1); }
 
 .navigation__nav {
   height: 100vh;
-  width: 100%;
   position: fixed;
   top: 0;
-  right: 0;
-  z-index: 8; }
+  left: 0;
+  z-index: 8;
+  width: 0;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
 
 .navigation__list {
   position: absolute;
@@ -241,7 +244,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  list-style: none; }
+  list-style: none;
+  width: 100%; }
 
 .navigation__link:link, .navigation__link:visited {
   font-size: 3rem;
@@ -262,6 +266,13 @@ body {
   background-position: 100%;
   color: #55c57a;
   transform: translateX(1.5rem); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
