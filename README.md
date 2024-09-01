@@ -19,10 +19,7 @@ Natours is a web application that offers adventure tours to various destinations
 
 - HTML5
 - CSS3
-- JavaScript
-- Node.js
-- Express.js
-- MongoDB
+- SCSS
 
 ## Installation
 
