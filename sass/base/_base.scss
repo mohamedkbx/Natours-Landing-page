@@ -9,6 +9,22 @@
 
 html {
   font-size: 62.5%;
+
+  // @include respond(phone) {     // it doesn't importnt cause the next media is also the same so it will applu on all >900px
+  //   font-size: 50%;
+  // }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem =9px 9/16
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem =10px 1rem=8px 8/16
+  }
+
+  @include respond(big-disktop) {
+    font-size: 75%; //1rem = 12 12/16
+  }
 }
 
 body {
