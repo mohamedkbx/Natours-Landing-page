@@ -8,6 +8,10 @@
   transition: transform 0.3s, box-shadow 0.3s;
   //   transform: skewY(7deg);
 
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
   &:hover {
     transform: translateY(-1.5rem) scale(1.05);
 
@@ -21,5 +25,8 @@
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     color: transparent;
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
   }
 }

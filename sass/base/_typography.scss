@@ -13,6 +13,11 @@
       animation-duration: 1s;
       animation-timing-function: ease-out; */
     animation: moveInleft 1s ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
   &--sub {
     display: block;
@@ -23,6 +28,9 @@
       animation-duration: 1s;
       animation-timing-function: ease-out; */
     animation: moveInRight 1s ease-out;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -36,6 +44,14 @@
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);

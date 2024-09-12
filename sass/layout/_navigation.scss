@@ -18,6 +18,11 @@
     z-index: 10;
     text-align: center;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
   }
 
   &__background {
@@ -30,6 +35,11 @@
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 5;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.7, 1);
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
   }
 
   &__nav {
