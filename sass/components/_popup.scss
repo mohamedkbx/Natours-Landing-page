@@ -22,11 +22,25 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.4s 0.2s;
+
+    @media (max-width: 1200px) {
+      width: 85%; // Adjust width for medium screens
+    }
+
+    @media (max-width: 768px) {
+      width: 95%; // Nearly full-width on mobile screens
+      padding: 2rem;
+      display: block; // Stack columns on smaller screens
+    }
   }
 
   &__left {
     width: 33.333333%;
     display: table-cell;
+    @media (max-width: 768px) {
+      width: 100%; // Full width on mobile
+      display: block; // Stack content
+    }
   }
 
   &__right {
@@ -34,11 +48,20 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 2rem; // Reduced padding on mobile for better fit
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+    @media (max-width: 768px) {
+      width: 100%; // Image remains full-width
+      height: auto; // Maintain aspect ratio
+    }
   }
 
   &--text {
@@ -47,6 +70,11 @@
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
     hyphens: auto;
+    @media (max-width: 768px) {
+      font-size: 1.2rem; // Slightly smaller font on mobile
+      column-count: 1; // Single column text on mobile for better readability
+      column-gap: 2rem; // Reduced gap
+    }
   }
 
   &:target {
@@ -69,6 +97,9 @@
       text-decoration: none;
       font-size: 3rem;
       line-height: 1;
+      @media (max-width: 768px) {
+        font-size: 2.5rem; // Adjust close button size on mobile
+      }
     }
     &:hover {
       color: $color-primary;
