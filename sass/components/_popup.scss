@@ -5,12 +5,20 @@
   background-color: rgba($color-black, 0.8);
   top: 0;
   left: 0;
-
   opacity: 0;
   visibility: hidden;
+  z-index: 15;
   transition: all 0.3s;
-
   overflow: hidden;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+  }
+
   &__content {
     @include absCenter;
     width: 75%;
