@@ -10,6 +10,7 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  overflow: hidden;
   &__content {
     @include absCenter;
     width: 75%;
@@ -28,8 +29,8 @@
     }
 
     @media (max-width: 768px) {
-      width: 95%; // Nearly full-width on mobile screens
-      padding: 2rem;
+      width: 95%;
+
       display: block; // Stack columns on smaller screens
     }
   }
@@ -38,8 +39,13 @@
     width: 33.333333%;
     display: table-cell;
     @media (max-width: 768px) {
+      height: 30vh;
       width: 100%; // Full width on mobile
       display: block; // Stack content
+
+      &:first-child {
+        display: none;
+      }
     }
   }
 
@@ -104,5 +110,10 @@
     &:hover {
       color: $color-primary;
     }
+  }
+
+  @media (max-width: 768px) {
+    height: 100%;
+    z-index: 10;
   }
 }
