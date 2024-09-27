@@ -56,6 +56,7 @@
     width: 0;
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    pointer-events: none;
   }
 
   &__list {
@@ -85,7 +86,6 @@
       background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-White 50%);
       background-size: 225%;
       transition: all 0.4s;
-      pointer-events: none;
 
       span {
         margin-right: 1.5rem;
@@ -107,6 +107,7 @@
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
+    pointer-events: auto;
   }
 
   //ICON
