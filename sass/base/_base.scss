@@ -41,3 +41,8 @@ body {
   }
 }
 /* Global Reset */
+::selection {
+  // it will change the color of the selected text
+  background-color: $color-primary;
+  color: $color-White;
+}
